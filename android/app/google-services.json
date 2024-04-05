@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "1005575930724",
+    "firebase_url": "https://pasopati-fcb90-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "pasopati-fcb90",
+    "storage_bucket": "pasopati-fcb90.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1005575930724:android:225f6f0abc25079a2ef071",
+        "android_client_info": {
+          "package_name": "com.hplbz.promobile"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwWpNqZYNJqfiEWtHRPctrxdYYCV_-ETA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
