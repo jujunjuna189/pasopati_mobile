@@ -5,6 +5,7 @@ import 'package:pro_mobile/repository/auth_repo.dart';
 import 'package:pro_mobile/repository/feature_repo.dart';
 import 'package:pro_mobile/utils/colors.dart';
 import 'package:pro_mobile/widgets/toast/toast_alert.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class DashboardScreen extends StatefulWidget {
   const DashboardScreen({Key? key}) : super(key: key);
@@ -50,6 +51,13 @@ class _DashboardScreenState extends State<DashboardScreen> {
             customMessage: true, customMessageText: "Hanya yang berwenang");
       }
     });
+  }
+
+  void launchURL(String link) async {
+    final Uri url = Uri.parse(link);
+    if (!await launchUrl(url)) {
+      throw Exception('Could not launch $url');
+    }
   }
 
   @override
@@ -378,8 +386,278 @@ class _DashboardScreenState extends State<DashboardScreen> {
                     ),
                   ],
                 ),
-              )
+              ),
             ],
+          ),
+        ),
+        const SizedBox(
+          height: 25,
+        ),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 10),
+          child: Container(
+            padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+            decoration: BoxDecoration(
+                color: bgWhite, borderRadius: BorderRadius.circular(10)),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const Text(
+                  "Sosial Media",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                GestureDetector(
+                  onTap: (() {
+                    launchURL(
+                        "https://www.instagram.com/penpussenarmed?igsh=cTF6OGNoOHZkZzJy");
+                  }),
+                  child: Container(
+                    padding: const EdgeInsets.symmetric(
+                        vertical: 10, horizontal: 15),
+                    decoration: const BoxDecoration(
+                      color: bgWhite,
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Expanded(
+                          child: Row(
+                            children: [
+                              SizedBox(
+                                  width: 33,
+                                  height: 33,
+                                  child: Image.asset(
+                                      "assets/images/logo/pussenarmed.png")),
+                              const SizedBox(
+                                width: 10,
+                              ),
+                              const Text(
+                                "Pussenarmed",
+                                style: TextStyle(
+                                    fontSize: 16, fontWeight: FontWeight.bold),
+                              ),
+                            ],
+                          ),
+                        ),
+                        const Icon(Icons.navigate_next),
+                      ],
+                    ),
+                  ),
+                ),
+                const Divider(
+                  height: 2,
+                  color: Colors.black12,
+                ),
+                GestureDetector(
+                  onTap: (() {
+                    launchURL(
+                        "https://www.instagram.com/puspentni?igsh=MWRjbG5sanJ1dmF1bQ==");
+                  }),
+                  child: Container(
+                    padding: const EdgeInsets.symmetric(
+                        vertical: 10, horizontal: 15),
+                    decoration: const BoxDecoration(
+                      color: bgWhite,
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Expanded(
+                          child: Row(
+                            children: [
+                              SizedBox(
+                                  width: 33,
+                                  height: 33,
+                                  child:
+                                      Image.asset("assets/images/logo/c.png")),
+                              const SizedBox(
+                                width: 10,
+                              ),
+                              const Text(
+                                "Pasopati",
+                                style: TextStyle(
+                                    fontSize: 16, fontWeight: FontWeight.bold),
+                              ),
+                            ],
+                          ),
+                        ),
+                        const Icon(Icons.navigate_next),
+                      ],
+                    ),
+                  ),
+                ),
+                const Divider(
+                  height: 2,
+                  color: Colors.black12,
+                ),
+                GestureDetector(
+                  onTap: (() {
+                    launchURL(
+                        "https://www.instagram.com/tni_angkatan_darat?igsh=MXRzNTM0Nzl4ZDdv");
+                  }),
+                  child: Container(
+                    padding: const EdgeInsets.symmetric(
+                        vertical: 10, horizontal: 15),
+                    decoration: const BoxDecoration(
+                      color: bgWhite,
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Expanded(
+                          child: Row(
+                            children: [
+                              SizedBox(
+                                  width: 33,
+                                  height: 33,
+                                  child: Image.asset(
+                                      "assets/images/logo/tni_ad.png")),
+                              const SizedBox(
+                                width: 10,
+                              ),
+                              const Text(
+                                "TNI Angkatan Darat",
+                                style: TextStyle(
+                                    fontSize: 16, fontWeight: FontWeight.bold),
+                              ),
+                            ],
+                          ),
+                        ),
+                        const Icon(Icons.navigate_next),
+                      ],
+                    ),
+                  ),
+                ),
+                const Divider(
+                  height: 2,
+                  color: Colors.black12,
+                ),
+                GestureDetector(
+                  onTap: (() {
+                    launchURL(
+                        "https://www.instagram.com/penkostrad?igsh=dXduZzc4dWw1djhk");
+                  }),
+                  child: Container(
+                    padding: const EdgeInsets.symmetric(
+                        vertical: 10, horizontal: 15),
+                    decoration: const BoxDecoration(
+                      color: bgWhite,
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Expanded(
+                          child: Row(
+                            children: [
+                              SizedBox(
+                                  width: 33,
+                                  height: 33,
+                                  child: Image.asset(
+                                      "assets/images/logo/kostrad.png")),
+                              const SizedBox(
+                                width: 10,
+                              ),
+                              const Text(
+                                "Kostrad",
+                                style: TextStyle(
+                                    fontSize: 16, fontWeight: FontWeight.bold),
+                              ),
+                            ],
+                          ),
+                        ),
+                        const Icon(Icons.navigate_next),
+                      ],
+                    ),
+                  ),
+                ),
+                const Divider(
+                  height: 2,
+                  color: Colors.black12,
+                ),
+                GestureDetector(
+                  onTap: (() {
+                    launchURL("");
+                  }),
+                  child: Container(
+                    padding: const EdgeInsets.symmetric(
+                        vertical: 10, horizontal: 15),
+                    decoration: const BoxDecoration(
+                      color: bgWhite,
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Expanded(
+                          child: Row(
+                            children: [
+                              SizedBox(
+                                  width: 33,
+                                  height: 33,
+                                  child: Image.asset(
+                                      "assets/images/logo/gold.jpg")),
+                              const SizedBox(
+                                width: 10,
+                              ),
+                              const Text(
+                                "TRI Dharma Eka Karma",
+                                style: TextStyle(
+                                    fontSize: 16, fontWeight: FontWeight.bold),
+                              ),
+                            ],
+                          ),
+                        ),
+                        const Icon(Icons.navigate_next),
+                      ],
+                    ),
+                  ),
+                ),
+                const Divider(
+                  height: 2,
+                  color: Colors.black12,
+                ),
+                GestureDetector(
+                  onTap: (() {
+                    launchURL("https://www.detik.com");
+                  }),
+                  child: Container(
+                    padding: const EdgeInsets.symmetric(
+                        vertical: 10, horizontal: 15),
+                    decoration: const BoxDecoration(
+                      color: bgWhite,
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Expanded(
+                          child: Row(
+                            children: [
+                              SizedBox(
+                                  width: 33,
+                                  height: 33,
+                                  child: Image.asset(
+                                      "assets/images/logo/detik.png")),
+                              const SizedBox(
+                                width: 10,
+                              ),
+                              const Text(
+                                "Detik.com",
+                                style: TextStyle(
+                                    fontSize: 16, fontWeight: FontWeight.bold),
+                              ),
+                            ],
+                          ),
+                        ),
+                        const Icon(Icons.navigate_next),
+                      ],
+                    ),
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
         const SizedBox(

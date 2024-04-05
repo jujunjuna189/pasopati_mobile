@@ -123,9 +123,41 @@ class _LoginScreenState extends State<LoginScreen> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               SizedBox(
+                height: 35,
+                width: 35,
+                child: Image.asset("assets/images/logo/p.png"),
+              ),
+              const SizedBox(
+                width: 5,
+              ),
+              SizedBox(
+                height: 48,
+                width: 48,
+                child: Image.asset("assets/images/logo/q.png"),
+              ),
+              const SizedBox(
+                width: 5,
+              ),
+              SizedBox(
                 height: 50,
                 width: 50,
                 child: Image.asset("assets/images/logo/c.png"),
+              ),
+              const SizedBox(
+                width: 5,
+              ),
+              SizedBox(
+                height: 40,
+                width: 40,
+                child: Image.asset("assets/images/logo/r.png"),
+              ),
+              const SizedBox(
+                width: 5,
+              ),
+              SizedBox(
+                height: 38,
+                width: 38,
+                child: Image.asset("assets/images/logo/ma.png"),
               ),
             ],
           ),
