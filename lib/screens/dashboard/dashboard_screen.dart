@@ -384,10 +384,242 @@ class _DashboardScreenState extends State<DashboardScreen> {
                         )
                       ],
                     ),
+                    const SizedBox(
+                      height: 15,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Expanded(
+                          child: GestureDetector(
+                            onTap: (() {
+                              ToastAlert.instance.showMessage(customMessage: true, customMessageText: "Fitur sedang dalam pengembangan");
+                            }),
+                            child: Container(
+                              padding: const EdgeInsets.symmetric(
+                                  vertical: 15, horizontal: 15),
+                              decoration: BoxDecoration(
+                                color: bgWhite,
+                                borderRadius: BorderRadius.circular(8),
+                              ),
+                              child: Column(
+                                children: [
+                                  SizedBox(
+                                      width: 40,
+                                      height: 40,
+                                      child: Image.asset(
+                                          "assets/images/icon/letterbox.png")),
+                                  const SizedBox(
+                                    height: 5,
+                                  ),
+                                  const Text(
+                                    "Saran dan Masukan",
+                                    style: TextStyle(
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                  const Text(
+                                    "Kirim Saran dan Masukan",
+                                    textAlign: TextAlign.center,
+                                    style: TextStyle(fontSize: 10),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                        )
+                      ],
+                    ),
                   ],
                 ),
               ),
             ],
+          ),
+        ),
+        const SizedBox(
+          height: 25,
+        ),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 10),
+          child: Container(
+            padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+            decoration: BoxDecoration(
+                color: bgWhite, borderRadius: BorderRadius.circular(10)),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const Text(
+                  "Halaman Website",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                GestureDetector(
+                  onTap: (() {
+                    launchURL(
+                        "https://tniad.mil.id");
+                  }),
+                  child: Container(
+                    padding: const EdgeInsets.symmetric(
+                        vertical: 10, horizontal: 15),
+                    decoration: const BoxDecoration(
+                      color: bgWhite,
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Expanded(
+                          child: Row(
+                            children: [
+                              SizedBox(
+                                  width: 33,
+                                  height: 33,
+                                  child: Image.asset(
+                                      "assets/images/logo/tni_ad.png")),
+                              const SizedBox(
+                                width: 10,
+                              ),
+                              const Text(
+                                "TNI Angkatan Darat",
+                                style: TextStyle(
+                                    fontSize: 16, fontWeight: FontWeight.bold),
+                              ),
+                            ],
+                          ),
+                        ),
+                        const Icon(Icons.navigate_next),
+                      ],
+                    ),
+                  ),
+                ),
+                const Divider(
+                  height: 2,
+                  color: Colors.black12,
+                ),
+                GestureDetector(
+                  onTap: (() {
+                    launchURL(
+                        "https://kostrad.mil.id");
+                  }),
+                  child: Container(
+                    padding: const EdgeInsets.symmetric(
+                        vertical: 10, horizontal: 15),
+                    decoration: const BoxDecoration(
+                      color: bgWhite,
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Expanded(
+                          child: Row(
+                            children: [
+                              SizedBox(
+                                  width: 33,
+                                  height: 33,
+                                  child: Image.asset(
+                                      "assets/images/logo/kostrad.png")),
+                              const SizedBox(
+                                width: 10,
+                              ),
+                              const Text(
+                                "Kostrad",
+                                style: TextStyle(
+                                    fontSize: 16, fontWeight: FontWeight.bold),
+                              ),
+                            ],
+                          ),
+                        ),
+                        const Icon(Icons.navigate_next),
+                      ],
+                    ),
+                  ),
+                ),
+                const Divider(
+                  height: 2,
+                  color: Colors.black12,
+                ),
+                GestureDetector(
+                  onTap: (() {
+                    launchURL("https://tni.mil.id");
+                  }),
+                  child: Container(
+                    padding: const EdgeInsets.symmetric(
+                        vertical: 10, horizontal: 15),
+                    decoration: const BoxDecoration(
+                      color: bgWhite,
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Expanded(
+                          child: Row(
+                            children: [
+                              SizedBox(
+                                  width: 33,
+                                  height: 33,
+                                  child: Image.asset(
+                                      "assets/images/logo/gold.jpg")),
+                              const SizedBox(
+                                width: 10,
+                              ),
+                              const Text(
+                                "TNI",
+                                style: TextStyle(
+                                    fontSize: 16, fontWeight: FontWeight.bold),
+                              ),
+                            ],
+                          ),
+                        ),
+                        const Icon(Icons.navigate_next),
+                      ],
+                    ),
+                  ),
+                ),
+                const Divider(
+                  height: 2,
+                  color: Colors.black12,
+                ),
+                GestureDetector(
+                  onTap: (() {
+                    launchURL("https://www.detik.com");
+                  }),
+                  child: Container(
+                    padding: const EdgeInsets.symmetric(
+                        vertical: 10, horizontal: 15),
+                    decoration: const BoxDecoration(
+                      color: bgWhite,
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Expanded(
+                          child: Row(
+                            children: [
+                              SizedBox(
+                                  width: 33,
+                                  height: 33,
+                                  child: Image.asset(
+                                      "assets/images/logo/detik.png")),
+                              const SizedBox(
+                                width: 10,
+                              ),
+                              const Text(
+                                "Detik.com",
+                                style: TextStyle(
+                                    fontSize: 16, fontWeight: FontWeight.bold),
+                              ),
+                            ],
+                          ),
+                        ),
+                        const Icon(Icons.navigate_next),
+                      ],
+                    ),
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
         const SizedBox(
@@ -437,48 +669,6 @@ class _DashboardScreenState extends State<DashboardScreen> {
                               ),
                               const Text(
                                 "Pussenarmed",
-                                style: TextStyle(
-                                    fontSize: 16, fontWeight: FontWeight.bold),
-                              ),
-                            ],
-                          ),
-                        ),
-                        const Icon(Icons.navigate_next),
-                      ],
-                    ),
-                  ),
-                ),
-                const Divider(
-                  height: 2,
-                  color: Colors.black12,
-                ),
-                GestureDetector(
-                  onTap: (() {
-                    launchURL(
-                        "https://www.instagram.com/puspentni?igsh=MWRjbG5sanJ1dmF1bQ==");
-                  }),
-                  child: Container(
-                    padding: const EdgeInsets.symmetric(
-                        vertical: 10, horizontal: 15),
-                    decoration: const BoxDecoration(
-                      color: bgWhite,
-                    ),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Expanded(
-                          child: Row(
-                            children: [
-                              SizedBox(
-                                  width: 33,
-                                  height: 33,
-                                  child:
-                                      Image.asset("assets/images/logo/c.png")),
-                              const SizedBox(
-                                width: 10,
-                              ),
-                              const Text(
-                                "Pasopati",
                                 style: TextStyle(
                                     fontSize: 16, fontWeight: FontWeight.bold),
                               ),
@@ -580,7 +770,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                 ),
                 GestureDetector(
                   onTap: (() {
-                    launchURL("");
+                    launchURL("https://www.instagram.com/puspentni?igsh=MWRjbG5sanJ1dmF1bQ==");
                   }),
                   child: Container(
                     padding: const EdgeInsets.symmetric(
@@ -603,48 +793,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                                 width: 10,
                               ),
                               const Text(
-                                "TRI Dharma Eka Karma",
-                                style: TextStyle(
-                                    fontSize: 16, fontWeight: FontWeight.bold),
-                              ),
-                            ],
-                          ),
-                        ),
-                        const Icon(Icons.navigate_next),
-                      ],
-                    ),
-                  ),
-                ),
-                const Divider(
-                  height: 2,
-                  color: Colors.black12,
-                ),
-                GestureDetector(
-                  onTap: (() {
-                    launchURL("https://www.detik.com");
-                  }),
-                  child: Container(
-                    padding: const EdgeInsets.symmetric(
-                        vertical: 10, horizontal: 15),
-                    decoration: const BoxDecoration(
-                      color: bgWhite,
-                    ),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Expanded(
-                          child: Row(
-                            children: [
-                              SizedBox(
-                                  width: 33,
-                                  height: 33,
-                                  child: Image.asset(
-                                      "assets/images/logo/detik.png")),
-                              const SizedBox(
-                                width: 10,
-                              ),
-                              const Text(
-                                "Detik.com",
+                                "TNI",
                                 style: TextStyle(
                                     fontSize: 16, fontWeight: FontWeight.bold),
                               ),

@@ -98,7 +98,7 @@ class _InformationScreenState extends State<InformationScreen> {
                                       width: 40,
                                       height: 40,
                                       child: Image.asset(
-                                          "assets/images/icon/form-survei.png")),
+                                          "assets/images/icon/letterbox.png")),
                                 ],
                               ),
                             ),
@@ -106,7 +106,7 @@ class _InformationScreenState extends State<InformationScreen> {
                               height: 10,
                             ),
                             const Text(
-                              "Layanan Publik",
+                              "Saran & Masukan",
                               style: TextStyle(fontSize: 16),
                             ),
                           ],
