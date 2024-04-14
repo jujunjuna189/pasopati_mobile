@@ -26,13 +26,17 @@ class VehicleVanPermissionRepo {
         ToastLoader.instance.hideLoader();
         return iterable;
       }
+
+      if(response.statusCode != 200 || response.statusCode != 500){
+        var jsonResponse = jsonDecode(response.body);
+        ToastAlert.instance.showMessage(customMessage: true, customMessageText: jsonResponse['status'] ?? '');
+        return [];
+      }
     } catch (e) {
       ToastLoader.instance.hideLoader();
       ToastAlert.instance.showMessage(serverError: true);
+      return [];
     }
-    ToastLoader.instance.hideLoader();
-    ToastAlert.instance.showMessage(failed: true);
-    return false;
   }
 
   Future store(Map<String, dynamic> body) async {

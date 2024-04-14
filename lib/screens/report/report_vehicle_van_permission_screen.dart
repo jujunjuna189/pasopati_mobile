@@ -106,6 +106,28 @@ class _ReportVehicleVanPermissionScreenState
                       style: const TextStyle(fontWeight: FontWeight.bold)),
                 ],
               ),
+              const SizedBox(
+                height: 5,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  const Text("Nomor Kendaraan"),
+                  Text(value['nomor'],
+                      style: const TextStyle(fontWeight: FontWeight.bold)),
+                ],
+              ),
+              const SizedBox(
+                height: 5,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  const Text("Keterangan"),
+                  Text(value['deskripsi'],
+                      style: const TextStyle(fontWeight: FontWeight.bold)),
+                ],
+              ),
             ],
           ),
         );

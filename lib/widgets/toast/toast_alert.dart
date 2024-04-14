@@ -7,7 +7,7 @@ class ToastAlert{
   void showMessage({bool success = false, bool empty = false, bool failed = false, bool serverError = false, bool customMessage = false, String customMessageText = ""}) {
     EasyLoading.showToast(
       toastMesage(success: success, empty: empty, failed: failed, serverError: serverError, customMessage: customMessage, customMessageText: customMessageText),
-      toastPosition: EasyLoadingToastPosition.bottom,
+      toastPosition: EasyLoadingToastPosition.center,
       duration: const Duration(milliseconds: 2500)
     );
   }

@@ -46,20 +46,20 @@ class PopupPermission {
                           FieldText(
                               controller: destinationController,
                               placeHolder: "..."),
-                          const SizedBox(
-                            height: 10,
-                          ),
-                          const Text(
-                            "Jenis Kendaraan",
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold, fontSize: 18),
-                          ),
-                          const SizedBox(
-                            height: 10,
-                          ),
-                          FieldText(
-                              controller: typeVihicleController,
-                              placeHolder: "..."),
+                          // const SizedBox(
+                          //   height: 10,
+                          // ),
+                          // const Text(
+                          //   "Jenis Kendaraan",
+                          //   style: TextStyle(
+                          //       fontWeight: FontWeight.bold, fontSize: 18),
+                          // ),
+                          // const SizedBox(
+                          //   height: 10,
+                          // ),
+                          // FieldText(
+                          //     controller: typeVihicleController,
+                          //     placeHolder: "..."),
                           const SizedBox(
                             height: 50,
                           ),
@@ -70,7 +70,7 @@ class PopupPermission {
                               onPressed: (() {
                                 callback!({
                                   'destination': destinationController.text,
-                                  'type_vihicle': typeVihicleController.text
+                                  'type_vihicle': '' //typeVihicleController.text
                                 });
                                 Navigator.of(context).pop();
                               }),

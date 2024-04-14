@@ -77,10 +77,7 @@ class _InformationScreenState extends State<InformationScreen> {
                     Expanded(
                       child: GestureDetector(
                         onTap: (() async {
-                          if (!await launchUrl(Uri.parse(
-                              "https://docs.google.com/spreadsheets/d/1mDJK9RF2mgrq2mC8qk4Qs6MEQ9WaPyODtfrhZGFMcEs/edit?usp=sharing"))) {
-                            throw Exception('Gagal membuka tautan');
-                          }
+                          navigation("/report_suggestion");
                         }),
                         child: Column(
                           children: [

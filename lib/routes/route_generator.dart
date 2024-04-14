@@ -23,11 +23,13 @@ import 'package:pro_mobile/screens/report/report_armory_screen.dart';
 import 'package:pro_mobile/screens/report/report_logistics.dart';
 import 'package:pro_mobile/screens/report/report_permission_screen.dart';
 import 'package:pro_mobile/screens/report/report_presence_screen.dart';
+import 'package:pro_mobile/screens/report/report_suggestion_screen.dart';
 import 'package:pro_mobile/screens/report/report_vehicle_permission_screen.dart';
 import 'package:pro_mobile/screens/report/report_vehicle_van_permission_screen.dart';
 import 'package:pro_mobile/screens/scan_qr/scan_screen.dart';
 import 'package:pro_mobile/screens/splash/splash_screen.dart';
 import 'package:pro_mobile/screens/staff/staff_screen.dart';
+import 'package:pro_mobile/screens/suggestion/suggestion_screen.dart';
 
 class RouteGenerator {
   static Route<dynamic> generateRoute(RouteSettings settings) {
@@ -135,6 +137,8 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (_) => const AbilityDataScreen());
       case '/staff':
         return MaterialPageRoute(builder: (_) => const StaffScreen());
+        case '/suggestion':
+        return MaterialPageRoute(builder: (_) => const SuggestionScreen());
       case '/report_presence':
         return MaterialPageRoute(builder: (_) => const ReportPresenceScreen());
       case '/report_permission':
@@ -150,6 +154,8 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (_) => const ReportArmoryScreen());
       case '/report_logistics':
         return MaterialPageRoute(builder: (_) => const ReportLogisticsScreen());
+      case '/report_suggestion':
+        return MaterialPageRoute(builder: (_) => const ReportSuggestionScreen());
       default:
         // If there is no such named route in the switch statement, e.g. /third
         return _errorRoute();

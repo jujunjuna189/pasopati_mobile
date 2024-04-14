@@ -393,7 +393,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                         Expanded(
                           child: GestureDetector(
                             onTap: (() {
-                              ToastAlert.instance.showMessage(customMessage: true, customMessageText: "Fitur sedang dalam pengembangan");
+                              Navigator.of(context).pushNamed("/suggestion");
                             }),
                             child: Container(
                               padding: const EdgeInsets.symmetric(
