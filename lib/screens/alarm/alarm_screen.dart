@@ -26,10 +26,7 @@ class _AlarmScreenState extends State<AlarmScreen> {
         padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 15),
         physics: const ScrollPhysics(),
         children: [
-          Wrap(
-            alignment: WrapAlignment.spaceEvenly,
-            spacing: 5,
-            runSpacing: 10,
+          Column(
             children: alarmList
                 .asMap()
                 .map((index, value) => MapEntry(
@@ -42,8 +39,9 @@ class _AlarmScreenState extends State<AlarmScreen> {
                         }),
                         child: Container(
                           padding: const EdgeInsets.symmetric(
-                              vertical: 15, horizontal: 15),
-                          width: MediaQuery.of(context).size.width * 0.44,
+                              vertical: 20, horizontal: 15),
+                          margin: const EdgeInsets.only(bottom: 10),
+                          width: double.infinity,
                           decoration: BoxDecoration(
                             color: bgWhite,
                             borderRadius: BorderRadius.circular(8),

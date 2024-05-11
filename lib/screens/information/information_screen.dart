@@ -172,41 +172,6 @@ class _InformationScreenState extends State<InformationScreen> {
                                     width: 40,
                                     height: 40,
                                     child: Image.asset(
-                                        "assets/images/icon/armored-van.png")),
-                              ],
-                            ),
-                          ),
-                          const SizedBox(
-                            height: 10,
-                          ),
-                          const Text(
-                            "Ranpur",
-                            style: TextStyle(fontSize: 16),
-                          ),
-                        ],
-                      ),
-                    )),
-                    Expanded(
-                        child: GestureDetector(
-                      onTap: (() {
-                        navigation("/report_vehicle_permission");
-                      }),
-                      child: Column(
-                        children: [
-                          Container(
-                            width: 60,
-                            height: 60,
-                            decoration: BoxDecoration(
-                              color: bgLightTransparent,
-                              borderRadius: BorderRadius.circular(50),
-                            ),
-                            child: Stack(
-                              alignment: Alignment.center,
-                              children: [
-                                SizedBox(
-                                    width: 40,
-                                    height: 40,
-                                    child: Image.asset(
                                         "assets/images/icon/armored-vehicle.png")),
                               ],
                             ),
@@ -215,7 +180,7 @@ class _InformationScreenState extends State<InformationScreen> {
                             height: 10,
                           ),
                           const Text(
-                            "Angkutan",
+                            "Kendaraan",
                             style: TextStyle(fontSize: 16),
                           ),
                         ],
@@ -226,6 +191,70 @@ class _InformationScreenState extends State<InformationScreen> {
               ],
             ),
           ),
+        ),
+        const SizedBox(
+          height: 20,
+        ),
+        Stack(
+          children: [
+            Positioned(
+              child: Align(
+                alignment: Alignment.center,
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 10),
+                  child: Container(
+                    padding: const EdgeInsets.only(top: 35, bottom: 40, left: 20, right: 20),
+                    decoration: BoxDecoration(
+                      color: bgWhite,
+                      borderRadius: BorderRadius.circular(10),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.red.withOpacity(0.5),
+                          spreadRadius: 2,
+                          blurRadius: 50,
+                          offset: const Offset(0, 0), // changes position of shadow
+                        ),
+                      ],
+                    ),
+                    child: Column(
+                      children: [
+                        const Text(
+                          "YONARMED 9 PASOPATI",
+                          style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                        ),
+                        const Text(
+                          "Kontak WhatsApp",
+                          style: TextStyle(fontSize: 12, color: Colors.black38, fontWeight: FontWeight.w500),
+                        ),
+                        const SizedBox(
+                          height: 20,
+                        ),
+                        SizedBox(
+                            width: 100,
+                            height: 100,
+                            child: Image.asset(
+                                "assets/images/contact/kontak2.PNG")
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+            ),
+            Positioned(
+              top: 0,
+              left: 0,
+              right: 0,
+              child: SizedBox(
+                width: 40,
+                height: 40,
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(50),
+                  child: Image.asset("assets/images/logo/c.png"),
+                )
+              ),
+            ),
+          ],
         ),
       ],
     );

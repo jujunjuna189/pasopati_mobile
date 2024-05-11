@@ -233,18 +233,18 @@ class _DashboardScreenState extends State<DashboardScreen> {
                                       width: 40,
                                       height: 40,
                                       child: Image.asset(
-                                          "assets/images/icon/armored-van.png")),
+                                          "assets/images/icon/armored-vehicle.png")),
                                   const SizedBox(
                                     height: 5,
                                   ),
                                   const Text(
-                                    "Ranpur",
+                                    "Kendaraan",
                                     style: TextStyle(
                                         fontSize: 16,
                                         fontWeight: FontWeight.bold),
                                   ),
                                   const Text(
-                                    "Keluar Masuk Kendaraan Tempur",
+                                    "Keluar Masuk Kendaraan",
                                     textAlign: TextAlign.center,
                                     style: TextStyle(fontSize: 10),
                                   ),
@@ -259,8 +259,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                         Expanded(
                           child: GestureDetector(
                             onTap: (() {
-                              Navigator.of(context)
-                                  .pushNamed("/vehicle_permission");
+                              Navigator.of(context).pushNamed("/suggestion");
                             }),
                             child: Container(
                               padding: const EdgeInsets.symmetric(
@@ -275,18 +274,18 @@ class _DashboardScreenState extends State<DashboardScreen> {
                                       width: 40,
                                       height: 40,
                                       child: Image.asset(
-                                          "assets/images/icon/armored-vehicle.png")),
+                                          "assets/images/icon/letterbox.png")),
                                   const SizedBox(
                                     height: 5,
                                   ),
                                   const Text(
-                                    "Angkutan",
+                                    "Saran dan Masukan",
                                     style: TextStyle(
                                         fontSize: 16,
                                         fontWeight: FontWeight.bold),
                                   ),
                                   const Text(
-                                    "Keluar Masuk Angkutan",
+                                    "Kirim Saran dan Masukan",
                                     textAlign: TextAlign.center,
                                     style: TextStyle(fontSize: 10),
                                   ),
@@ -374,52 +373,6 @@ class _DashboardScreenState extends State<DashboardScreen> {
                                   ),
                                   const Text(
                                     "Data Kemampuan Personil",
-                                    textAlign: TextAlign.center,
-                                    style: TextStyle(fontSize: 10),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ),
-                        )
-                      ],
-                    ),
-                    const SizedBox(
-                      height: 15,
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Expanded(
-                          child: GestureDetector(
-                            onTap: (() {
-                              Navigator.of(context).pushNamed("/suggestion");
-                            }),
-                            child: Container(
-                              padding: const EdgeInsets.symmetric(
-                                  vertical: 15, horizontal: 15),
-                              decoration: BoxDecoration(
-                                color: bgWhite,
-                                borderRadius: BorderRadius.circular(8),
-                              ),
-                              child: Column(
-                                children: [
-                                  SizedBox(
-                                      width: 40,
-                                      height: 40,
-                                      child: Image.asset(
-                                          "assets/images/icon/letterbox.png")),
-                                  const SizedBox(
-                                    height: 5,
-                                  ),
-                                  const Text(
-                                    "Saran dan Masukan",
-                                    style: TextStyle(
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.bold),
-                                  ),
-                                  const Text(
-                                    "Kirim Saran dan Masukan",
                                     textAlign: TextAlign.center,
                                     style: TextStyle(fontSize: 10),
                                   ),
@@ -618,6 +571,129 @@ class _DashboardScreenState extends State<DashboardScreen> {
                     ),
                   ),
                 ),
+                const Divider(
+                  height: 2,
+                  color: Colors.black12,
+                ),
+                GestureDetector(
+                  onTap: (() {
+                    launchURL("https://www.kompas.com/");
+                  }),
+                  child: Container(
+                    padding: const EdgeInsets.symmetric(
+                        vertical: 10, horizontal: 15),
+                    decoration: const BoxDecoration(
+                      color: bgWhite,
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Expanded(
+                          child: Row(
+                            children: [
+                              SizedBox(
+                                  width: 33,
+                                  height: 33,
+                                  child: Image.asset(
+                                      "assets/images/logo/kompas.png")),
+                              const SizedBox(
+                                width: 10,
+                              ),
+                              const Text(
+                                "Kompas",
+                                style: TextStyle(
+                                    fontSize: 16, fontWeight: FontWeight.bold),
+                              ),
+                            ],
+                          ),
+                        ),
+                        const Icon(Icons.navigate_next),
+                      ],
+                    ),
+                  ),
+                ),
+                const Divider(
+                  height: 2,
+                  color: Colors.black12,
+                ),
+                GestureDetector(
+                  onTap: (() {
+                    launchURL("https://okezone.com/");
+                  }),
+                  child: Container(
+                    padding: const EdgeInsets.symmetric(
+                        vertical: 10, horizontal: 15),
+                    decoration: const BoxDecoration(
+                      color: bgWhite,
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Expanded(
+                          child: Row(
+                            children: [
+                              SizedBox(
+                                  width: 33,
+                                  height: 33,
+                                  child: Image.asset(
+                                      "assets/images/logo/okezone.png")),
+                              const SizedBox(
+                                width: 10,
+                              ),
+                              const Text(
+                                "Okezone",
+                                style: TextStyle(
+                                    fontSize: 16, fontWeight: FontWeight.bold),
+                              ),
+                            ],
+                          ),
+                        ),
+                        const Icon(Icons.navigate_next),
+                      ],
+                    ),
+                  ),
+                ),
+                const Divider(
+                  height: 2,
+                  color: Colors.black12,
+                ),
+                GestureDetector(
+                  onTap: (() {
+                    launchURL("https://www.tribunnews.com/");
+                  }),
+                  child: Container(
+                    padding: const EdgeInsets.symmetric(
+                        vertical: 10, horizontal: 15),
+                    decoration: const BoxDecoration(
+                      color: bgWhite,
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Expanded(
+                          child: Row(
+                            children: [
+                              SizedBox(
+                                  width: 33,
+                                  height: 33,
+                                  child: Image.asset(
+                                      "assets/images/logo/tribun.png")),
+                              const SizedBox(
+                                width: 10,
+                              ),
+                              const Text(
+                                "Tribun",
+                                style: TextStyle(
+                                    fontSize: 16, fontWeight: FontWeight.bold),
+                              ),
+                            ],
+                          ),
+                        ),
+                        const Icon(Icons.navigate_next),
+                      ],
+                    ),
+                  ),
+                ),
               ],
             ),
           ),
@@ -794,6 +870,94 @@ class _DashboardScreenState extends State<DashboardScreen> {
                               ),
                               const Text(
                                 "TNI",
+                                style: TextStyle(
+                                    fontSize: 16, fontWeight: FontWeight.bold),
+                              ),
+                            ],
+                          ),
+                        ),
+                        const Icon(Icons.navigate_next),
+                      ],
+                    ),
+                  ),
+                ),
+                const Divider(
+                  height: 2,
+                  color: Colors.black12,
+                ),
+                GestureDetector(
+                  onTap: (() {
+                    launchURL("https://youtube.com/@batalyonarmed9?si=8J7wLLUa5yjTrGMf");
+                  }),
+                  child: Container(
+                    padding: const EdgeInsets.symmetric(
+                        vertical: 10, horizontal: 15),
+                    decoration: const BoxDecoration(
+                      color: bgWhite,
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Expanded(
+                          child: Row(
+                            children: [
+                              SizedBox(
+                                  width: 33,
+                                  height: 33,
+                                  child: ClipRRect(
+                                    borderRadius: BorderRadius.circular(50),
+                                    child: Image.asset(
+                                        "assets/images/logo/yt-yon.png"),
+                                  )),
+                              const SizedBox(
+                                width: 10,
+                              ),
+                              const Text(
+                                "Yonarmed 9 Pasopati",
+                                style: TextStyle(
+                                    fontSize: 16, fontWeight: FontWeight.bold),
+                              ),
+                            ],
+                          ),
+                        ),
+                        const Icon(Icons.navigate_next),
+                      ],
+                    ),
+                  ),
+                ),
+                const Divider(
+                  height: 2,
+                  color: Colors.black12,
+                ),
+                GestureDetector(
+                  onTap: (() {
+                    launchURL("https://www.instagram.com/batalyonarmed9?igsh=MWwwYjM5NzB0dXN4cw==");
+                  }),
+                  child: Container(
+                    padding: const EdgeInsets.symmetric(
+                        vertical: 10, horizontal: 15),
+                    decoration: const BoxDecoration(
+                      color: bgWhite,
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Expanded(
+                          child: Row(
+                            children: [
+                              SizedBox(
+                                  width: 33,
+                                  height: 33,
+                                  child: ClipRRect(
+                                    borderRadius: BorderRadius.circular(50),
+                                    child: Image.asset(
+                                        "assets/images/logo/ig-yon.png"),
+                                  )),
+                              const SizedBox(
+                                width: 10,
+                              ),
+                              const Text(
+                                "Yonarmed 9 Pasopati",
                                 style: TextStyle(
                                     fontSize: 16, fontWeight: FontWeight.bold),
                               ),

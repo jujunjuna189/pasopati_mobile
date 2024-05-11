@@ -113,7 +113,7 @@ class _BujukScreenState extends State<BujukScreen> {
                                   width: 5,
                                 ),
                                 Text(
-                                  "E-Learning",
+                                  "Bujuk",
                                   style: TextStyle(fontSize: 10),
                                 ),
                               ],

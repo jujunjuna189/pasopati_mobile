@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pro_mobile/screens/learning/article/article_screen.dart';
+import 'package:pro_mobile/screens/learning/base/base_screen.dart';
 import 'package:pro_mobile/screens/learning/bujuk/bujuk_screen.dart';
 import 'package:pro_mobile/screens/learning/e_learning/e_learning_screen.dart';
 import 'package:pro_mobile/utils/colors.dart';
@@ -17,7 +18,7 @@ class _LearningScreenState extends State<LearningScreen>
 
   @override
   void initState() {
-    _controller = TabController(length: 3, vsync: this);
+    _controller = TabController(length: 4, vsync: this);
     super.initState();
   }
 
@@ -44,6 +45,9 @@ class _LearningScreenState extends State<LearningScreen>
               Tab(
                 text: "Bujuk",
               ),
+              Tab(
+                text: "Pangkalan",
+              ),
             ],
           ),
         ),
@@ -54,6 +58,7 @@ class _LearningScreenState extends State<LearningScreen>
           ArticleScreen(),
           ELearningScreen(),
           BujukScreen(),
+          BaseScreen(),
         ],
       ),
     );

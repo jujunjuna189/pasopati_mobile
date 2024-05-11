@@ -18,6 +18,8 @@ class Api {
   static const eLearningShow = '${server}api/e-learning/show';
   //Bujuk
   static const bujukShow = '${server}api/bujuk/show';
+  // Pangkalan
+  static const pangkalanShow = '${server}api/pangkalan/show';
   //Absensi
   static const absensiShow = '${server}api/absensi/show';
   static const absensiStore = '${server}api/absensi/store';

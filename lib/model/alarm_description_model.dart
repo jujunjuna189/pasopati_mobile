@@ -4,34 +4,28 @@ class AlarmDescriptionModel {
 
   final List<Map<String, dynamic>> alarmDescription = [
     {
-      "title": "Awan Jingga",
-      "sub_title": "Siaga Tingkat I",
+      "title": "PASOPATI HIJAU",
+      "sub_title": "Tugas Non Armed/Kewilayahan",
       "description":
-      "Menggunakan PDL III (PDLT) dengan membawa ransel, senjata, sangkur dan baret (Helm diransel) - kumpul di lapangan bola",
+      "Menggunakan PDLT membawa Rangsel Protap - Kumpul Di Lapangan Yonarmed 9/Pasopati.",
     },
     {
-      "title": "Awan Kuning",
-      "sub_title": "Siaga Tingkat II",
+      "title": "PASOPATI COKLAT",
+      "sub_title": "Tugas Armed",
       "description":
-      "Menggunakan PDL II dengan membawa senjata, sangkur, draghriem dan topi rimba - kumpul di lapangan bola",
+      "Menggunakan PDLT + Senjata membawa Rangsel Protap dan Menyiapkan Meriam - Kumpul Di Lapangan Yonarmed 9/Pasopati.",
     },
     {
-      "title": "Awan Biru",
-      "sub_title": "Siaga Tingkat III",
+      "title": "PASOPATI SIGAP",
+      "sub_title": "Alarm Steling Masuk Kedudukan",
       "description":
-      "Menggunakan pakaian pada saat itu (Pokpam pakaian PDL II tidak bersenjata) - kumpul di lapangan bola",
+      "Menggunakan PDLT + Senjata memakai helm - Masuk Kedudukan Masing Masing.",
     },
     {
-      "title": "Angin Gunung",
-      "sub_title": "Pencabutan Siaga",
+      "title": "PASOPATI MERAH",
+      "sub_title": "Alarm Kebakaran",
       "description":
-      "Menggunakan pakaian pada saat itu - kumpul di lapangan bola",
-    },
-    {
-      "title": "Angin Puyuh",
-      "sub_title": "Siap Digerakan Sewaktu Waktu",
-      "description":
-      "Menggunakan PDL II tanpa senjata, draghriem dan baret - kumpul di lapangan bola",
+      "Menggunakan Pakaian Pada Saat itu membawa alat alat pemadam kebakaran- Kumpul Di Sekitar Lokasi Kebakaran.",
     },
   ];
 }

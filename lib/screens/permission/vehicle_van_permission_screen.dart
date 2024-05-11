@@ -138,7 +138,7 @@ class _VehicleVanPermissionScreenState
     return Scaffold(
       appBar: AppBar(
         elevation: 0.0,
-        title: const Text("PERIZINAN RANPUR"),
+        title: const Text("PERIZINAN KENDARAAN"),
       ),
       body: Column(
         children: [

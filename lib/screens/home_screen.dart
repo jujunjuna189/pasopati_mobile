@@ -84,7 +84,17 @@ class _HomeScreenState extends State<HomeScreen> {
         title: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text(_titleScreen),
+            Row(
+              children: [
+                SizedBox(
+                    width: 23,
+                    height: 23,
+                    child: Image.asset(
+                        "assets/images/logo/c.png")),
+                const SizedBox(width: 5,),
+                Text(_titleScreen),
+              ],
+            ),
             Row(
               children: [
                 const NotifNotification(),
