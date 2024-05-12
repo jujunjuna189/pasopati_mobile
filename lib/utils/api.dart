@@ -37,11 +37,13 @@ class Api {
   static const logistikStore = '${server}api/logistik/store';
   //Staff
   static const staffShow = '${server}api/staff/show';
-  //Pejabat Armed
+  // Pejabat
+  static const pejabatShow = '${server}api/pejabat/show';
+  // Pejabat Armed
   static const armedShow = '${server}api/armed/show';
-  //Pejabat Kostrad
+  // Pejabat Kostrad
   static const kostradShow = '${server}api/kostrad/show';
-  //Calendar
+  // Calendar
   static const calendarShow = '${server}api/event/show';
   // Suggestion
   static const suggestion = '${server}api/saran/store';
