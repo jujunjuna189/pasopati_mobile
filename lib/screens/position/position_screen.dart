@@ -16,11 +16,12 @@ class _PositionScreenState extends State<PositionScreen> {
   bool _statusLoadPosition = false;
   List _positionList = [];
   Map<String, dynamic> _currentTab = {
-      "tabKey": 1,
-      "image": "assets/images/position/kostrad50.png",
-      "title": 'Kostrad',
-      "isActive": true,
-    };
+    "tabKey": 1,
+    "image": "assets/images/position/kostrad50.png",
+    "title": 'Kostrad',
+    "satuan": "kostrad",
+    "isActive": true,
+  };
   List<Map<String, dynamic>> _tabData = [
     {
       "tabKey": 1,
@@ -33,24 +34,28 @@ class _PositionScreenState extends State<PositionScreen> {
       "tabKey": 2,
       "image": "assets/images/position/armed50.png",
       "title": 'Armed',
+      "satuan": "armed",
       "isActive": false,
     },
     {
       "tabKey": 3,
       "image": "assets/images/position/armed50.png",
       "title": 'Devif 1 Kostrad',
+      "satuan": "divif-1-kostrad",
       "isActive": false,
     },
     {
       "tabKey": 4,
       "image": "assets/images/position/armed50.png",
       "title": 'Menarmed 1 Sthira Yudha',
+      "satuan": "menarmed-1-sthira-yudha",
       "isActive": false,
     },
     {
       "tabKey": 5,
       "image": "assets/images/position/armed50.png",
       "title": 'Yonarmed 9 Pasopati',
+      "satuan": "yonarmed-9-pasopati",
       "isActive": false,
     },
   ];
@@ -61,42 +66,36 @@ class _PositionScreenState extends State<PositionScreen> {
     super.initState();
   }
 
-  void getPosition() async {
-    await PositionRepo.instance.show({}).then((value) {
+  void getPosition(
+      {String satuan = '', String nama = '', String jabatan = ''}) async {
+    setState(() {
+      _statusLoadPosition = false;
+    });
+    await PositionRepo.instance.show(
+        {'satuan': satuan, 'nama': nama, 'jabatan': jabatan}).then((value) {
       _statusLoadPosition = true;
       _positionList = value;
       setState(() {});
     });
   }
 
-  // void onSearch(String searchValue) {
-  //   if (_navigation == 1) {
-  //     _positionList = _kostradList
-  //         .where((value) =>
-  //             value['nama']!
-  //                 .toLowerCase()
-  //                 .contains(searchValue.toLowerCase()) ||
-  //             value['jabatan']!
-  //                 .toLowerCase()
-  //                 .contains(searchValue.toLowerCase()))
-  //         .toList();
-  //   } else if (_navigation == 2) {
-  //     _positionList = _armedList
-  //         .where((value) =>
-  //             value['nama']!
-  //                 .toLowerCase()
-  //                 .contains(searchValue.toLowerCase()) ||
-  //             value['jabatan']!
-  //                 .toLowerCase()
-  //                 .contains(searchValue.toLowerCase()))
-  //         .toList();
-  //   }
-  //   setState(() {});
-  // }
+  void onSearch(String searchValue) {
+    getPosition(
+        satuan: _currentTab['satuan'].toString(),
+        nama: searchValue,
+        jabatan: searchValue);
+  }
 
   void onSetTab(int index) {
     _currentTab = _tabData[index];
-    getPosition({satuan: _currentTab['']});
+    List<Map<String, dynamic>> drafData = [];
+    for (var item in _tabData) {
+      item['isActive'] = false;
+      drafData.add(item);
+    }
+    drafData[index]['isActive'] = true;
+    _tabData = drafData;
+    getPosition(satuan: _currentTab['satuan'].toString());
   }
 
   @override
@@ -104,7 +103,7 @@ class _PositionScreenState extends State<PositionScreen> {
     return Column(
       children: [
         FieldSearch(
-          onChange: ((value) {}),
+          onChange: ((value) => onSearch(value)),
         ),
         const SizedBox(
           height: 10,
@@ -138,10 +137,19 @@ class _PositionScreenState extends State<PositionScreen> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      Image.asset(item.value['image'], width: 30, height: 30,),
+                      Image.asset(
+                        item.value['image'],
+                        width: 30,
+                        height: 30,
+                      ),
                       Text(
                         item.value['title'].toString(),
-                        style: TextStyle(fontWeight: FontWeight.bold, color: item.value['isActive'] ? Colors.redAccent : Colors.black,),
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: item.value['isActive']
+                              ? Colors.redAccent
+                              : Colors.black,
+                        ),
                       ),
                     ],
                   ),
@@ -213,7 +221,8 @@ class _PositionScreenState extends State<PositionScreen> {
                       Navigator.of(context).pushNamed("/detail_kostrad",
                           arguments: jsonEncode({
                             ...value,
-                            "title": "Pejabat ${_currentTab['title'].toString()}",
+                            "title":
+                                "Pejabat ${_currentTab['title'].toString()}",
                           }));
                     }),
                     child: Container(
