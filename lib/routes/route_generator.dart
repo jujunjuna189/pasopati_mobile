@@ -104,11 +104,9 @@ class RouteGenerator {
       case '/permission':
         return MaterialPageRoute(builder: (_) => const PermissionScreen());
       case '/vehicle_permission':
-        return MaterialPageRoute(
-            builder: (_) => const VehiclePermissionScreen());
+        return MaterialPageRoute(builder: (_) => const VehiclePermissionScreen());
       case '/vehicle_van_permission':
-        return MaterialPageRoute(
-            builder: (_) => const VehicleVanPermissionScreen());
+        return MaterialPageRoute(builder: (_) => const VehicleVanPermissionScreen());
       case '/alarm':
         return MaterialPageRoute(builder: (_) => const AlarmScreen());
       case '/alarm_board':
@@ -137,19 +135,16 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (_) => const AbilityDataScreen());
       case '/staff':
         return MaterialPageRoute(builder: (_) => const StaffScreen());
-        case '/suggestion':
+      case '/suggestion':
         return MaterialPageRoute(builder: (_) => const SuggestionScreen());
       case '/report_presence':
         return MaterialPageRoute(builder: (_) => const ReportPresenceScreen());
       case '/report_permission':
-        return MaterialPageRoute(
-            builder: (_) => const ReportPermissionScreen());
+        return MaterialPageRoute(builder: (_) => const ReportPermissionScreen());
       case '/report_vehicle_van_permission':
-        return MaterialPageRoute(
-            builder: (_) => const ReportVehicleVanPermissionScreen());
+        return MaterialPageRoute(builder: (_) => const ReportVehicleVanPermissionScreen());
       case '/report_vehicle_permission':
-        return MaterialPageRoute(
-            builder: (_) => const ReportVehiclePermissionScreen());
+        return MaterialPageRoute(builder: (_) => const ReportVehiclePermissionScreen());
       case '/report_armory':
         return MaterialPageRoute(builder: (_) => const ReportArmoryScreen());
       case '/report_logistics':

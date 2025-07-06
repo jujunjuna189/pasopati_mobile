@@ -36,8 +36,7 @@ class _InformationScreenState extends State<InformationScreen> {
     if (_user['role'] == 1 || _user['role'] == '1') {
       Navigator.of(context).pushNamed(routeName);
     } else {
-      ToastAlert.instance.showMessage(
-          customMessage: true, customMessageText: "Hanya yang berwenang");
+      ToastAlert.instance.showMessage(customMessage: true, customMessageText: "Hanya yang berwenang");
     }
   }
 
@@ -49,8 +48,7 @@ class _InformationScreenState extends State<InformationScreen> {
         Padding(
           padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
           child: Container(
-            padding:
-                const EdgeInsets.only(top: 30, bottom: 30, left: 20, right: 20),
+            padding: const EdgeInsets.only(top: 30, bottom: 30, left: 20, right: 20),
             decoration: BoxDecoration(
               color: bgWhite,
               borderRadius: BorderRadius.circular(10),
@@ -92,10 +90,7 @@ class _InformationScreenState extends State<InformationScreen> {
                                 alignment: Alignment.center,
                                 children: [
                                   SizedBox(
-                                      width: 40,
-                                      height: 40,
-                                      child: Image.asset(
-                                          "assets/images/icon/letterbox.png")),
+                                      width: 40, height: 40, child: Image.asset("assets/images/icon/letterbox.png")),
                                 ],
                               ),
                             ),
@@ -108,7 +103,8 @@ class _InformationScreenState extends State<InformationScreen> {
                             ),
                           ],
                         ),
-                      )),
+                      ),
+                    ),
                     Expanded(
                         child: GestureDetector(
                       onTap: (() {
@@ -126,11 +122,7 @@ class _InformationScreenState extends State<InformationScreen> {
                             child: Stack(
                               alignment: Alignment.center,
                               children: [
-                                SizedBox(
-                                    width: 40,
-                                    height: 40,
-                                    child: Image.asset(
-                                        "assets/images/icon/soldier.png")),
+                                SizedBox(width: 40, height: 40, child: Image.asset("assets/images/icon/soldier.png")),
                               ],
                             ),
                           ),
@@ -171,8 +163,7 @@ class _InformationScreenState extends State<InformationScreen> {
                                 SizedBox(
                                     width: 40,
                                     height: 40,
-                                    child: Image.asset(
-                                        "assets/images/icon/armored-vehicle.png")),
+                                    child: Image.asset("assets/images/icon/armored-vehicle.png")),
                               ],
                             ),
                           ),
@@ -229,12 +220,7 @@ class _InformationScreenState extends State<InformationScreen> {
                         const SizedBox(
                           height: 20,
                         ),
-                        SizedBox(
-                            width: 100,
-                            height: 100,
-                            child: Image.asset(
-                                "assets/images/contact/kontak2.PNG")
-                        ),
+                        SizedBox(width: 100, height: 100, child: Image.asset("assets/images/contact/kontak2.PNG")),
                       ],
                     ),
                   ),
@@ -246,13 +232,12 @@ class _InformationScreenState extends State<InformationScreen> {
               left: 0,
               right: 0,
               child: SizedBox(
-                width: 40,
-                height: 40,
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(50),
-                  child: Image.asset("assets/images/logo/c.png"),
-                )
-              ),
+                  width: 40,
+                  height: 40,
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(50),
+                    child: Image.asset("assets/images/logo/c.png"),
+                  )),
             ),
           ],
         ),
